@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.BiometricsPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout Padding="80, 100, 80, 80"
+                     BackgroundColor="White"
+                     HorizontalOptions="CenterAndExpand"
+                     x:Name="page">
+            <Label Text="Biometric data allows us to calculate your nutritional needs"
+                   FontSize="18"
+                   TextColor="Black"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"/>
+            <StackLayout Padding="0, 20, 0, 20"
+                         BackgroundColor="White">
+                <Entry Placeholder="Name"
+                       Keyboard="Text"
+                       x:Name="name"/>
+                <Entry Placeholder="Age"
+                       Keyboard="Numeric"
+                       x:Name="age"/>
+                <Picker Title="Sex"
+                        x:Name="sex">
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry Placeholder="Height (inches)"
+                       Keyboard="Numeric"
+                       x:Name="height"/>
+                <Entry Placeholder="Weight (pounds)"
+                       Keyboard="Numeric"
+                       x:Name="weight"/>
+                <Picker Title="Activity Level"
+                        x:Name="activityLevel">
+                    <Picker.Items>
+                        <x:String>Work a desk job and engage in very little exercise or chores</x:String>
+                        <x:String>Engage in exercise at least 1 to 3 days in a week</x:String>
+                        <x:String>Move a lot during the day and workout at least 3 to 5 days in a week</x:String>
+                        <x:String>Engage in vigorous exercise on most days</x:String>
+                        <x:String>Intense workouts 6 to 7 days a week</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <Label Text="Invalid Input"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   TextColor="White"
+                   x:Name="invalidLabel"/>
+            <Button Text="Next"
+                    FontSize="17"
+                    HeightRequest="70"
+                    CornerRadius="100"
+                    BackgroundColor="LightGray"
+                    VerticalOptions="EndAndExpand"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

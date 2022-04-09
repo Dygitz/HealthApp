@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.FoodDetailPage">
+    <NavigationPage.TitleView>
+        <Button Text="ADD"
+                TextColor="White"
+                FontSize="24"
+                BackgroundColor="Transparent"
+                HorizontalOptions="End"
+                Clicked="Button_Clicked"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="0, 20, 0, 0">
+                <Label Text="Nutrition Facts"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   FontSize="28"
+                   FontAttributes="Bold"/>
+                <StackLayout Padding="80, 10, 80, 0">
+                    <Label Text="{Binding Description}"
+                       TextColor="Black"
+                       FontSize="20"
+                       HorizontalOptions="Start"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Calories:"
+                           TextColor="Black"
+                           FontSize="20"/>
+                        <Label x:Name="calories"
+                           FontSize="20"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Portion Size:"
+                           TextColor="Black"
+                           FontSize="20"/>
+                        <Label x:Name="portion"
+                           FontSize="20"/>
+                    </StackLayout>
+                    <BoxView Color="Gray"
+                         WidthRequest="100"
+                         HeightRequest="2"/>
+                    <StackLayout x:Name="nutrients"
+                             Padding="0, 10, 0, 50"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

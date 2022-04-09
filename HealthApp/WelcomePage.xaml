@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.WelcomePage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout Padding="80, 0, 80, 80"
+                     BackgroundColor="#69D764">
+            <Label Text="Diet Tracker"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   FontSize="64"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Get Started"
+                    FontSize="17"
+                    VerticalOptions="Fill"
+                    HeightRequest="70"
+                    CornerRadius="100"
+                    BackgroundColor="White"
+                    Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

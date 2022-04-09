@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.LogPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20, 20, 20, 0">
+            <!--Food Log Header-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Food Log"
+                       FontSize="39"
+                       TextColor="Black"
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"/>
+                <Button Text="+"
+                        FontSize="25"
+                        HorizontalOptions="EndAndExpand"
+                        Clicked="Button_Clicked"/>
+            </StackLayout>
+            <!--Food Log-->
+            <ListView x:Name="listView"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Description}"
+                                       FontSize="24"
+                                       HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+                            <ViewCell.ContextActions>
+                                <MenuItem x:Name="delete"
+                                          CommandParameter="{Binding .}"
+                                          Clicked="delete_Clicked"
+                                          Text="Delete"/>
+                            </ViewCell.ContextActions>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

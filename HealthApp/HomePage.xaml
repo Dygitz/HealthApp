@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthApp.HomePage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     Padding="50, 30, 50, 0">
+            <!--Calories Progress Bar-->
+            <ProgressBar
+                x:Name="progressBar"
+                ScaleY="5"
+                WidthRequest="250"/>
+            <!--Calorie Goal-->
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center">
+                <Label Text="Calorie Goal:"
+                   HorizontalTextAlignment="Center"
+                   FontSize="25"
+                   TextColor="SlateGray"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="EndAndExpand"/>
+                <Label Text="{Binding CalorieGoal}"
+                       HorizontalTextAlignment="Center"
+                       FontSize="25"
+                       TextColor="SlateGray"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <!--Calories Consumed-->
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center">
+                <Label Text="Calories Consumed:"
+                       HorizontalTextAlignment="Center"
+                       FontSize="25"
+                       TextColor="SlateGray"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="EndAndExpand"/>
+                <Label Text="{Binding CaloriesConsumed}"
+                       x:Name="caloriesConsumed"
+                       HorizontalTextAlignment="Center"
+                       FontSize="25"
+                       TextColor="SlateGray"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <!--Calories Left-->
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Center">
+                <Label Text="Calories Left:"
+                       HorizontalTextAlignment="Center"
+                       FontSize="25"
+                       TextColor="SlateGray"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="EndAndExpand"/>
+                <Label x:Name="caloriesLeft"
+                       HorizontalTextAlignment="Center"
+                       FontSize="25"
+                       TextColor="SlateGray"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
