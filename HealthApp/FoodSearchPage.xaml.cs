@@ -26,7 +26,7 @@ namespace HealthApp
             InitializeComponent();
             this.User = user;
             this.Db = Db;
-            FoodDataService = new FoodDataService("Cy7yB7eCFgBUr3GORobNywGVxKPZdoT1hhkYZqNX");
+            FoodDataService = new FoodDataService("Enter USDA FoodData Central API key here");
             Foods = new ObservableCollection<SearchResultFood>();
         }
 
