@@ -1,5 +1,5 @@
 # HealthApp
-Mobile app that tracks nutrient intake via USDA data
+Mobile app that tracks nutrient intake via USDA data <br />
 Made using Xamarin Forms
 
 
